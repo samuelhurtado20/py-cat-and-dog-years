@@ -1,8 +1,16 @@
 def get_human_age(cat_age: int, dog_age: int) -> list[int]:
+    # 1. Validación de Tipos [Satisface test_should_raise_error_for_invalid_types]
+    if not isinstance(cat_age, int) or not isinstance(dog_age, int):
+        raise TypeError("Ages must be integers")
+
+    # 2. Validación de Valores [Satisface test_should_handle_negative_numbers]
+    if cat_age < 0 or dog_age < 0:
+        raise ValueError("Ages cannot be negative")
+
     cat_human_age = 0
     dog_human_age = 0
 
-    # Lógica para el Gato
+    # Lógica de conversión para el Gato
     if cat_age >= 15:
         cat_human_age = 1
     if cat_age >= 24:
@@ -10,7 +18,7 @@ def get_human_age(cat_age: int, dog_age: int) -> list[int]:
     if cat_age > 24:
         cat_human_age += (cat_age - 24) // 4
 
-    # Lógica para el Perro
+    # Lógica de conversión para el Perro
     if dog_age >= 15:
         dog_human_age = 1
     if dog_age >= 24:
