@@ -1,5 +1,4 @@
 def get_human_age(cat_age: int, dog_age: int) -> list[int]:
-    # 1. Validación de Tipos [Satisface test_should_raise_error_for_invalid_types]
     if not isinstance(cat_age, int) or not isinstance(dog_age, int):
         raise TypeError("Ages must be integers")
 
