@@ -33,7 +33,7 @@ def test_should_raise_error_for_invalid_types() -> None:
 
 
 def test_should_handle_negative_numbers() -> None:
-    # Dependiendo de la implementación, podrías esperar un ValueError 
+    # Dependiendo de la implementación, podrías esperar un ValueError
     # o que devuelva [0, 0]. Si la lógica debe fallar:
     with pytest.raises(ValueError):
         get_human_age(-1, 20)
